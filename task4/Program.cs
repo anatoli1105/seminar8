@@ -33,3 +33,38 @@ void PrintArray(int[,]array)
  }
 int [,] array = MayArray(4,4);
 PrintArray(array);
+//int[] ResulttArray(int[,]array)
+//{
+double[] averageSum = new double[array.GetLength(1)];
+//int[] averageSum1 = new int[array.GetLength(1)];
+int i=0;
+int j = 0;
+//int sum = 0;
+
+for (i=0;i<array.GetLength(1);i++)
+    {
+        for ( j=0;j<array.GetLength(0);j++)
+        {
+             averageSum[i] = array[j,i]; //+= array[j,i];
+             if(array[i,j] < array[i,j+=1]) 
+            {
+            int temp = array[i,j];
+            array[i,j] = array[i,j+=1];
+            array[i,j+=1] = temp;
+            }
+             //averageSum1 [i] += array[j,i+=1];
+             //Console.Write($"{averageSum[i]}|\t");
+             
+             Console.Write($"{averageSum[i]}\t");
+        }
+        //Console.WriteLine();
+        //Console.Write($"{averageSum[i]}|\t");
+                //averageSum[i] /= array.GetLength(0);
+               //Console.Write($"{averageSum[i]/4}|\t");
+                //Console.Write($"{averageSum1 [i]}|\t");
+    }
+    //return averageSum;
+//}
+
+//int[] Sum = ResulttArray(array);
+//Console.WriteLine(averageSum[i]);

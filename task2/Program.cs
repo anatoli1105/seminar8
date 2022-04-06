@@ -18,7 +18,8 @@ for(int i=0;i<Matrix1.GetLength(0);i++)
     for(int j=0;j<Matrix1.GetLength(1);j++)
     {
         Console.Write($"{Matrix1[i,j]}*");
-        Console.Write($"{Matrix2[i,j]}!\t");
+        Console.Write($"{Matrix2[i,j]}=");
+        Console.Write($"{Matrix1[i,j]*Matrix2[i,j]}\t");
     }
     Console.WriteLine();
 }
