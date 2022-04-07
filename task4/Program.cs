@@ -31,40 +31,25 @@ void PrintArray(int[,]array)
     }
         Console.WriteLine();
  }
-int [,] array = MayArray(4,4);
+int [,] array = MayArray(2,4);
 PrintArray(array);
-//int[] ResulttArray(int[,]array)
-//{
-double[] averageSum = new double[array.GetLength(1)];
-//int[] averageSum1 = new int[array.GetLength(1)];
-int i=0;
-int j = 0;
-//int sum = 0;
-
-for (i=0;i<array.GetLength(1);i++)
+void MaxNumber(int[,]array)
+{
+    int i = 0;
+    int[] sum = new int [array.GetLength(1)];
+    for (i=0;i<array.GetLength(0);i++)
     {
-        for ( j=0;j<array.GetLength(0);j++)
+        for (int j=0;j<array.GetLength(1);j++)
         {
-             averageSum[i] = array[j,i]; //+= array[j,i];
-             if(array[i,j] < array[i,j+=1]) 
-            {
-            int temp = array[i,j];
-            array[i,j] = array[i,j+=1];
-            array[i,j+=1] = temp;
-            }
-             //averageSum1 [i] += array[j,i+=1];
-             //Console.Write($"{averageSum[i]}|\t");
-             
-             Console.Write($"{averageSum[i]}\t");
-        }
-        //Console.WriteLine();
-        //Console.Write($"{averageSum[i]}|\t");
-                //averageSum[i] /= array.GetLength(0);
-               //Console.Write($"{averageSum[i]/4}|\t");
-                //Console.Write($"{averageSum1 [i]}|\t");
-    }
-    //return averageSum;
-//}
+            sum[i] = array[i,j];
+            Console.Write($"{sum[i]}   \t");
 
-//int[] Sum = ResulttArray(array);
-//Console.WriteLine(averageSum[i]);
+            Console.Write($"{sum[i]}   \t");
+
+        }
+      //Console.Write($"\n\n{sum[i]}   \t");
+    } 
+        Console.WriteLine();
+
+}
+MaxNumber(array);      

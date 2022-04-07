@@ -38,17 +38,18 @@ void MaxNumber(int[,]array)
             sum[i]+=array[i,j];
         }
       Console.Write($"\n\nсумма элементов строки\t{i+1} равна {sum[i]}   \t");
-        }
+    }
         Console.WriteLine();
 
     int min = sum[0];  
-     for (i = 0; i < sum.Length; ++i)
+     for (i = 0; i < array.GetLength(0); i++)
     if (sum[i] < min) min = sum[i];
-    for (i = 0; i < sum.Length; ++i)
+  
+     for (i = 0; i < array.GetLength(0); i++)
     if(min == sum[i] )
     Console.Write($"\nна строке {i+1} находится наименьшая  сумма элементов,сумма = {sum[i]}   \t");
 }
-int [,] array = MayArray(4,4);
+int [,] array = MayArray(2,4);
 PrintArray(array);
 MaxNumber(array);
 
