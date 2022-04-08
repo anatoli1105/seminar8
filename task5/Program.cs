@@ -40,7 +40,6 @@ void SortArray(int[,]array)
         int max = j;
             for (int a=j+1;a<array.GetLength(1);a++)
             {
-                int max1 = j;
                 if(array[i,max]<array[i,a])
                     {
                      max = a;
