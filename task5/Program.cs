@@ -56,7 +56,7 @@ void SortArray(int[,]array)
     }
         Console.WriteLine();
  }
- int [,] array = MayArray(3,4);
+ int [,] array = MayArray(5,4);
 PrintArray(array);
  SortArray(array);
 
